@@ -10,6 +10,7 @@ import connection from 'express-myconnection';
 
 import index from './routes';
 import admin_dept from './routes/admin/departemen';
+import admin_kat  from './routes/admin/kategori';
 import config from './config/config';
 
 //end import file
@@ -39,6 +40,7 @@ app.use(
 
 app.use('/',index);
 app.use('/admin/departemen',admin_dept);
+app.use('/admin/kategori',admin_kat);
 
 app.listen(config.port)
 console.log(' Apps listen port -> '+config.webhost)

@@ -1,0 +1,44 @@
+
+<%+ extend('layouts/template') %>
+
+<%+ section('content') %>
+
+
+
+
+
+ <a id="submit-login" href="/admin/kategori/add" class="easyui-linkbutton" >Add</a>
+
+<table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">No</th>
+            <th>Nama</th>
+            <th>Action</th>
+        </tr>
+                       
+        <% if(data.length){ 
+                        
+         for(var i = 0;i < data.length;i++) { %>
+         
+        <tr>
+            <td><%=(i+1)%></td>
+            <td><%=data[i].nama%></td>
+            <td>
+                <a class="a-inside edit" href="/admin/kategori/<%=data[i].id%>/edit">Edit</a>
+                <a class="a-inside delete" href="/admin/kategori/delete/<%=data[i].id%>">Delete</a>
+
+               
+            </td>
+        </tr>
+    <% }
+    
+     }else{ %>
+         <tr>
+            <td colspan="5">No Data</td>
+         </tr>
+    <% } %>
+                                      
+    </table>
+
+
+<%+ endSection %>
