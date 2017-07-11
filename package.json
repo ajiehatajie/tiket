@@ -1,0 +1,28 @@
+{
+  "name": "ticketing",
+  "version": "1.0.0",
+  "description": "apps ticketing system by nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon ./src/server.js --exec ./node_modules/.bin/babel-node"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "ejs-layout": "^1.0.15",
+    "express": "^4.15.3",
+    "express-myconnection": "^1.0.4",
+    "express-validator": "^3.2.1",
+    "morgan": "^1.8.2",
+    "mysql": "github:mysqljs/mysql",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0"
+  }
+}

@@ -1,0 +1,24 @@
+
+<%+ extend('layouts/template') %>
+
+<%+ section('content') %>
+
+<form id="form-login" method="post" style="padding: 20px;" novalidate onsubmit="return false">
+            <div class="form-item">
+                <label for="username">Username</label> 
+                <br />
+                <input type="text" name="username" class="easyui-validatebox" required="true" style="width: 100%" />
+            </div>
+            <div class="form-item">
+                <label for="password">Password</label> 
+                <br />
+                <input type="password" name="password" class="easyui-validatebox" required="true" style="width: 100%" />
+            </div>
+            <div class="form-item">
+                <br />
+                <a id="submit-login" class="easyui-linkbutton" iconCls="icon-ok">Login</a>
+            </div>
+</form>
+
+
+<%+ endSection %>
