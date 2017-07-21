@@ -1,0 +1,70 @@
+
+<%+ extend('layouts/template') %>
+
+<%+ section('content') %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.6.4/tinymce.min.js"></script>
+<h1> Add Dashboard User</h1>
+
+<form id="form-login" method="post" style="padding: 20px;" action="/admin/departemen">
+            <div class="form-item">
+                <label for="username">Name</label> 
+                <br/>
+               <select id="Facility_state_or_province" 
+					name="Facility" size="1">
+					       <% data.forEach(function (kategori) { %>
+					         <option value = "<%= kategori.id %>" ><%= kategori.nama %></option>
+					   <% }); %>  
+					 </select>
+            </div>
+             <div class="form-item">
+                <label for="username">Departemen</label> 
+                <br/>
+               <select id="Facility_state_or_province" 
+					name="Facility" size="1">
+					       <% departemen.forEach(function (dept) { %>
+					         <option value = "<%= dept.id %>" ><%= dept.name %></option>
+					   <% }); %>  
+					 </select>
+            </div>
+            <div class="form-item">
+                <label for="username">Subject</label> 
+                <br/>
+                <input type="text" name="subject" placeholder="subject"
+                class="easyui-validatebox" style="width: 50%" />
+            </div>
+
+            <div class="form-item">
+                <label for="password">Desc</label> 
+                
+                    <textarea name="desc"></textarea>
+
+                </div>
+            <div class="form-item">
+                <br />
+                <input type="submit" id="submit-login" 
+                name="submit" value="Save" class="easyui-linkbutton" iconCls="icon-ok">
+            </div>
+</form>
+
+
+<% kategori.forEach( (drink) =>
+ { %>
+        <li><%= drink.name %> 	
+        </li>
+
+  <% });
+%>
+
+
+
+
+
+
+
+<script type="text/javascript">
+tinymce.init({
+    selector: "textarea"
+ });
+</script>
+
+<%+ endSection %>

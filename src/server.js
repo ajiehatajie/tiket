@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 import path from 'path';
 import mysql from 'mysql';
 import connection from 'express-myconnection';
+import engine from 'ejs-layout';
 //import db from './config/db';
 
 //import file routes
@@ -13,10 +14,14 @@ import admin_dept from './routes/admin/departemen';
 import admin_kat  from './routes/admin/kategori';
 import config from './config/config';
 
+
+//user
+import user_page from './routes/user/tiket'
+//
 //end import file
 
 const app = express();
-var engine = require('ejs-layout');
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views/'));
@@ -34,6 +39,8 @@ app.use(
         database:'ticketing' // your database name
     },'pool') //or single
 
+
+
 );
 
 
@@ -41,6 +48,7 @@ app.use(
 app.use('/',index);
 app.use('/admin/departemen',admin_dept);
 app.use('/admin/kategori',admin_kat);
+app.use('/user',user_page);
 
 app.listen(config.port)
 console.log(' Apps listen port -> '+config.webhost)
