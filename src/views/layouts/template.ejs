@@ -8,7 +8,7 @@
     <script type="text/javascript" src="/easyui/jquery.min.js"></script>
     <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
     <style type="text/css">
-        .fill 
+        .fill
         {
             background-color: #DFE8F6;
         }
@@ -56,36 +56,36 @@
         window.onload = startTime;
 </script>
 <head>
-    <title></title>   
+    <title></title>
 </head>
-<body class="easyui-layout">    
+<body class="easyui-layout">
 <!-- west -->
 <div region="west" class="fill" border="true" title="Navigation" style="width: 220px" split="true">
 
 </div>
     <p>
-        <span id="clock"></span>	
+        <span id="clock"></span>
     </p>
         <!-- center -->
 <div region="center" split="true" title="Main Content" id="content">
 
-    
+
      <div class="panel-body panel-body-noheader panel-body-noborder"  style="padding: 5px; ">
-       
+
         <div style="float:right; padding-top:5px;">
-				
+
 		</div>
         <div>
             <%+ yield('content') %>
 
         </div>
-        
+
       </div>
 </div>
-    
+
 <!-- south -->
 <div region="south" class="fill" style="height: 35px; padding: 5px;" split="true">
-Copyright &copy; 2017 - PT Benang Komunika Infotama
+Copyright &copy; 2017 
      <div id="clock"></div>
 </div>
 </body>
